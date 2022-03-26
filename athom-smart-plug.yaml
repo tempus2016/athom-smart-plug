@@ -66,20 +66,20 @@ sensor:
     voltage_divider: 780
     current:
       name: "${friendly_name} Current"
-      id: ${name}_current
+      id: socket_current
     voltage:
       name: "${friendly_name} Voltage"
-      id: ${name}_voltage
+      id: socket_voltage
     power:
       name: "${friendly_name} Power"
-      id: ${name}_power
+      id: socket_power
       unit_of_measurement: W
     change_mode_every: 1
     update_interval: 5s
 
   - platform: total_daily_energy
     name: "${friendly_name} Energy Used Today"
-    power_id: ${name}_power
+    power_id: socket_power
     unit_of_measurement: kWh
     accuracy_decimals: 3
     restore: true
