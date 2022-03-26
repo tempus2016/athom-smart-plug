@@ -70,6 +70,10 @@ sensor:
     voltage:
       name: "${friendly_name} Voltage"
       id: socket_voltage
+      filters:
+          - calibrate_linear:
+            - 269.95667 -> 242.0 
+            - 270.58032 -> 242.1 
     power:
       name: "${friendly_name} Power"
       id: socket_power
